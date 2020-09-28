@@ -1,5 +1,0 @@
-jupyter labextension install @jupyter-widgets/jupyterlab-manager
- jupyter labextension install @jupyterlab/toc@4.0.0
- jupyter labextension install jupyterlab-plotly@4.10.0 
- jupyter labextension install plotlywidget@4.10.0
- jupyter labextension install qgrid2@1.1.3
