@@ -1,0 +1,4 @@
+jupyter labextension install --minimize=False @jupyter-widgets/jupyterlab-manager
+jupyter labextension install --minimize=False jupyter-offlinenotebook
+jupyter labextension install --minimize=False @jupyterlab/toc
+jupyter labextension install --minimize=False qgrid2
