@@ -1,4 +1,5 @@
-jupyter nbextension enable --py widgetsnbextension
+jupyter nbextension enable --py --sys-prefix qgrid
+jupyter nbextension enable --py --sys-prefix widgetsnbextension
 jupyter labextension install --minimize=False @jupyter-widgets/jupyterlab-manager
 jupyter labextension install --minimize=False jupyter-offlinenotebook
 jupyter labextension install --minimize=False @jupyterlab/toc
