@@ -1,3 +1,4 @@
+jupyter nbextension enable --py widgetsnbextension
 jupyter labextension install --minimize=False @jupyter-widgets/jupyterlab-manager
 jupyter labextension install --minimize=False jupyter-offlinenotebook
 jupyter labextension install --minimize=False @jupyterlab/toc
