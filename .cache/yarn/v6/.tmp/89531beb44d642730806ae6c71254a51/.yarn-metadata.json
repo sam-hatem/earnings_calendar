@@ -1,0 +1,100 @@
+{
+  "manifest": {
+    "name": "@jupyterlab/toc",
+    "version": "4.0.0",
+    "private": false,
+    "description": "Table of Contents extension for JupyterLab",
+    "keywords": [
+      "jupyter",
+      "jupyterlab",
+      "jupyterlab-extension"
+    ],
+    "homepage": "https://github.com/jupyterlab/jupyterlab-toc",
+    "bugs": {
+      "url": "https://github.com/jupyterlab/jupyterlab-toc/issues"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/jupyterlab/jupyterlab-toc.git"
+    },
+    "license": "BSD-3-Clause",
+    "author": {
+      "name": "Project Jupyter"
+    },
+    "files": [
+      "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
+      "schema/*.json",
+      "style/**/*.{css,eot,gif,html,jpg,json,png,svg,woff2,ttf}"
+    ],
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "scripts": {
+      "build": "tsc",
+      "clean": "rimraf lib",
+      "precommit": "lint-staged",
+      "prettier": "prettier --write '**/*{.ts,.tsx,.js,.jsx,.css,.json,.md}'",
+      "watch": "tsc -w"
+    },
+    "lint-staged": {
+      "**/*{.ts,.tsx,.css,.json,.md}": [
+        "prettier --write",
+        "git add"
+      ]
+    },
+    "dependencies": {
+      "@jupyterlab/application": "^2.0.0",
+      "@jupyterlab/apputils": "^2.0.0",
+      "@jupyterlab/cells": "^2.0.0",
+      "@jupyterlab/coreutils": "^4.0.0",
+      "@jupyterlab/docmanager": "^2.0.0",
+      "@jupyterlab/docregistry": "^2.0.0",
+      "@jupyterlab/fileeditor": "^2.0.0",
+      "@jupyterlab/markdownviewer": "^2.0.0",
+      "@jupyterlab/notebook": "^2.0.0",
+      "@jupyterlab/rendermime": "^2.0.0",
+      "@lumino/algorithm": "^1.2.3",
+      "@lumino/coreutils": "^1.4.2",
+      "@lumino/messaging": "^1.3.3",
+      "@lumino/widgets": "^1.10.2",
+      "react": "^16.8.6",
+      "react-dom": "^16.8.6"
+    },
+    "devDependencies": {
+      "@types/react": "^16.8.22",
+      "@types/react-dom": "^16.8.4",
+      "husky": "^2.7.0",
+      "lint-staged": "^8.2.1",
+      "prettier": "^1.19.1",
+      "rimraf": "^2.7.1",
+      "tslint": "^5.20.1",
+      "tslint-config-prettier": "^1.18.0",
+      "tslint-plugin-prettier": "^2.1.0",
+      "typescript": "^3.5.2"
+    },
+    "resolutions": {
+      "@types/react": "~16.4.13"
+    },
+    "publishConfig": {
+      "access": "public"
+    },
+    "jupyterlab": {
+      "extension": "lib/extension.js",
+      "schemaDir": "schema"
+    },
+    "_registry": "npm",
+    "_loc": "/home/jovyan/.cache/yarn/v6/.tmp/89531beb44d642730806ae6c71254a51/package.json",
+    "readmeFilename": "README.md",
+    "readme": "# jupyterlab-toc\n\n[![Binder][badge-binder]][binder]\n\nA Table of Contents extension for JupyterLab. This auto-generates a table of contents in the left area when you have a notebook or markdown document open. The entries are clickable, and scroll the document to the heading in question.\n\nHere is an animation showing the extension's use, with a notebook from the [Python Data Science Handbook][python-data-science-handbook]:\n\n![Table of Contents](toc.gif 'Table of Contents')\n\n## Prerequisites\n\n- JupyterLab >=2.0\n- NodeJS 12+\n\n## Installation\n\n```bash\njupyter labextension install @jupyterlab/toc\n```\n\n## Development\n\nFor a development install, do the following in the repository directory:\n\n```bash\njlpm install\njlpm run build\njupyter labextension install .\n```\n\nYou can then run JupyterLab in watch mode to automatically pick up changes to `@jupyterlab/toc`. Open a terminal in the `@jupyterlab/toc` repository directory and enter\n\n```bash\njlpm run watch\n```\n\nThen launch JupyterLab using\n\n```bash\njupyter lab --watch\n```\n\nThis will automatically recompile `@jupyterlab/toc` upon changes, and JupyterLab will rebuild itself. You should then be able to refresh the page and see your changes.\n\n<!-- links -->\n\n[badge-binder]: https://mybinder.org/badge_logo.svg\n[binder]: https://mybinder.org/v2/gh/jupyterlab/jupyterlab-toc/master?urlpath=lab%2Ftree%2Fnotebooks%2Fdemo.ipynb\n[python-data-science-handbook]: https://github.com/jakevdp/PythonDataScienceHandbook\n\n<!-- /.links -->\n",
+    "licenseText": "Copyright (c) 2017, Project Jupyter Contributors\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this\n   list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright notice,\n   this list of conditions and the following disclaimer in the documentation\n   and/or other materials provided with the distribution.\n\n3. Neither the name of the copyright holder nor the names of its\n   contributors may be used to endorse or promote products derived from\n   this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "type": "tarball",
+    "reference": "file:../extensions/jupyterlab-toc-4.0.0.tgz",
+    "registry": "npm",
+    "hash": "",
+    "cacheIntegrity": "sha1-myA3DbpaGVFl/w1vVB/8IZGBjuY="
+  },
+  "registry": "npm",
+  "hash": "9b20370dba5a195165ff0d6f541ffc2191818ee6"
+}
